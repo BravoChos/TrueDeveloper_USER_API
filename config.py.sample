@@ -1,0 +1,17 @@
+db  = {
+    'user'     : 'test',
+    'password' : 'test',
+    'host'     : 'localhost',
+    'port'     : 3306,
+    'database' : 'trueshort_local'
+}
+
+class DevConfig:
+    DEBUG                           = True
+    JWT_SECRETE_KEY                 = 'SOME_SECRETE_BRO'
+    JWT_AUTH_USERNAME_KEY           = 'email'
+    JWT_EXPIRATION_DELTA_IN_SECONDS = 7 * 24 * 60 * 60
+    SQLALCHEMY_TRACK_MODIFICATIONS  = False
+    SQLALCHEMY_DATABASE_URI         = f"mysql://{db['user']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}"
+
+    AKM_KEY_ARN = 'TEST_KEY'
